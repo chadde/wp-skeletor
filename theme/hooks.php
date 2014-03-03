@@ -35,7 +35,8 @@ if ( ! is_admin() ) { // Actions on the front end
 	// THEME
 	add_action('after_setup_theme', 'skel_etor_setup');
 	add_action('wp_enqueue_scripts', 'skel_etor_enqueue_styles');
-	add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts');
+	add_action('wp_enqueue_scripts', 'skel_etor_cdn_resources', 10, 1);
+	add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts', 20, 1);
 	add_action('wp_head','skel_etor_google_font');
 	add_action('wp_print_scripts', 'google_maps_api');
 
