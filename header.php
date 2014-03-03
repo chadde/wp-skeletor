@@ -1,0 +1,66 @@
+<?php
+/**
+ * The header for our theme
+ *
+ * @package WordPress
+ * @subpackage SKEL-ETOR
+ * @since SKEL-ETOR 1.0
+ */
+
+?><!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>
+<?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
+	bloginfo('name'); // Remove if using YOAST SEO
+	wp_title( '|', true, 'right' );
+	$site_description = get_bloginfo( 'description', 'display' ); // Add the blog description for the home/front page.
+	if ( $site_description && ( is_home() || is_front_page() ) ) echo " | $site_description";
+	if ( $paged >= 2 || $page >= 2 ) echo ' | ' . sprintf( __( 'Page %s', 'skel_etor' ), max( $paged, $page ) ); // Add a page number if necessary:
+?>
+</title>
+
+<meta name="description" content="<?php bloginfo('description'); ?>">
+<meta name="author" content="The Nest - wearethenest.com.au">
+<meta name="viewport" content="width=device-width">
+
+<!-- FACEBOOK OG META -->
+<?php if( is_home() ) { ?>
+	<meta property="og:url" content="<?php echo home_url(); ?>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+	<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook-share.gif" />
+	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+	<meta property="og:site_name" content="<?php echo site_url('/'); ?>"/>
+<?php } ?>
+
+<link rel="shortcut icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" />
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<div class="container">
+
+	<header id="header">
+		<div id="logo">
+			<h1><a href="<?php echo site_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
+		</div>
+		<?php if (has_nav_menu('primary')) : ?>
+		<div id="nav-header">
+			<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+		</div>
+		<?php endif; ?>
+	</header>
