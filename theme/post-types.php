@@ -3,7 +3,7 @@
  * SKEL-ETOR Custom Post Types
  */
 
-//add_action( 'init', 'skel_etor_create_type' );
+add_action( 'init', 'skel_etor_create_type' );
 function skel_etor_create_type() {
 
 	// Post Type: "Post"
@@ -87,7 +87,7 @@ function skel_etor_create_type() {
  * SKEL-ETOR Custom Taxonomies
  */
 
-//add_action( 'init', 'skel_etor_create_taxonomy', 0 );
+add_action( 'init', 'skel_etor_create_taxonomy', 0 );
 function skel_etor_create_taxonomy() {
 
 	// Taxonomy: Category

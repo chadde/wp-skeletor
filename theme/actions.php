@@ -3,6 +3,7 @@
  * Theme Actions
  *
  * Functions defined here are attached to @see hooks.php
+ * No add_action's should be called here
  *
  * @see theme/hooks.php
  */

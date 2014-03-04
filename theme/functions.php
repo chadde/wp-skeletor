@@ -207,3 +207,23 @@ function skel_etor_format_date_time( $format = 'd M Y',  $post_id = '' ) {
 
 	echo $str;
 }
+
+
+add_action('admin_menu', 'my_admin_add_page');
+function my_admin_add_page() {
+    $my_admin_page = add_options_page(__('My Admin Page', 'map'), __('My Admin Page', 'map'), 'manage_options', 'map', 'my_admin_page');
+
+    // Adds my_help_tab when my_admin_page loads
+    add_action('load-'.$my_admin_page, 'my_admin_add_help_tab');
+}
+
+function my_admin_add_help_tab () {
+    $screen = get_current_screen();
+
+    // Add my_help_tab if current screen is My Admin Page
+    $screen->add_help_tab( array(
+        'id'	=> 'my_help_tab',
+        'title'	=> __('My Help Tab'),
+        'content'	=> '<p>' . __( 'Descriptive content that will show in My Help Tab-body goes here.' ) . '</p>',
+    ) );
+}
