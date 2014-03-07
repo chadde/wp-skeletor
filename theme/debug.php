@@ -1,12 +1,20 @@
 <?php
-
 /**
- * Debugging Helpers
+ * Theme Debugging Helpers
+ *
+ * @package WordPress
+ * @subpackage SKEL-ETOR
+ * @since SKEL-ETOR 1.0
  */
 
 $debug = false;
 
-// readable error output/debugging
+/**
+ * Readable error output/debugging
+ *
+ * @example ppr($var);		// Simple inline style
+ * @example ppro($var);		// Overlay style for cumbersome output
+ */
 if ( ! function_exists('ppr') AND ! function_exists('ppro')) {
 	function ppr($v) {
 		echo '<pre>'.htmlentities(print_r($v,true)).'</pre>';
@@ -40,10 +48,10 @@ if ( ! function_exists('dbug')) {
 /**
  * Template debugging information
  *
- * Displays when $debug = true, @see debug.php #7
+ * Displays when $debug = true, @see debug.php #10
  * Temporary usage: http://domain.com/?debug=1
  */
-if ( isset($_GET['debug']) || $debug == true) {
+if ( isset($_GET['debug']) OR $debug == true) {
 	/**
 	 * The Query WP is trying to fetch
 	 */

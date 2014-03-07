@@ -81,7 +81,7 @@ if ( ! function_exists('is_subpage') ) {
  */
 
 // Custom excerpts
-if ( ! function_exists('bosydney_excerpt') ) {
+if ( ! function_exists('skel_etor_excerpt') ) {
 	function long_excerpt($length) {
 		return 55;
 	}
@@ -99,7 +99,7 @@ if ( ! function_exists('bosydney_excerpt') ) {
 	}
 
 	// Applying the excerpts
-	function bosydney_excerpt($length_callback='', $more_callback='') {
+	function skel_etor_excerpt($length_callback='', $more_callback='') {
 		global $post;
 		if(function_exists($length_callback)){
 			add_filter('excerpt_length', $length_callback);

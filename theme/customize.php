@@ -1,6 +1,10 @@
 <?php
 /**
- * Customisation settings
+ * Theme Customisation Settings
+ *
+ * @package WordPress
+ * @subpackage SKEL-ETOR
+ * @since SKEL-ETOR 1.0
  */
 
 function skel_etor_customize_register( $wp_customize ) {

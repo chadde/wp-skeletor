@@ -1,10 +1,14 @@
 <?php
 /**
- * SKEL-ETOR Custom Post Types
+ * Theme Custom Post Types
+ *
+ * @package WordPress
+ * @subpackage SKEL-ETOR
+ * @since SKEL-ETOR 1.0
  */
 
-add_action( 'init', 'skel_etor_create_type' );
-function skel_etor_create_type() {
+add_action( 'init', 'skel_etor_create_post_type' );
+function skel_etor_create_post_type() {
 
 	// Post Type: "Post"
 	$post_type = 'book';

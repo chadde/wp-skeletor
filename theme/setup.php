@@ -1,9 +1,11 @@
 <?php
 /**
- * Theme Actions
+ * Theme Setup
+ *
+ * @package WordPress
+ * @subpackage SKEL-ETOR
+ * @since SKEL-ETOR 1.0
  */
-
-/* =============== THEME SETUP =============== */
 
 // Custom post type's and taxonomy's
 require( get_template_directory() . '/theme/post-types.php');
