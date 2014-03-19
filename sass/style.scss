@@ -12,15 +12,14 @@ Version: 1.0
 //  Primary Styles
 //  ==========================================================================
 
-body {font:62.5%/1.4em Arial, Helvetica, sans-serif; background:#fff;}
+body {font:100%/1.4em Arial, Helvetica, sans-serif; background:$page-background-color;}
 // ALTERNATIVES:
-// body {font:62.5%/1.4em Verdana, Geneva, sans-serif}
-// body {font:62.5%/1.4em Georgia, 'Times New Roman', Times, serif}
-// body {font:62.5%/1.4em Tahoma, Geneva, sans-serif}
-// body {font:62.5%/1.4em 'Trebuchet MS', Arial, Helvetica, sans-serif}
-// body {font:62.5%/1.4em 'Palatino Linotype', 'Book Antiqua', Palatino, serif}
+// body {font:100%/1.4em Verdana, Geneva, sans-serif; background:$page-background-color;}
+// body {font:100%/1.4em Georgia, 'Times New Roman', Times, serif; background:$page-background-color;}
+// body {font:100%/1.4em Tahoma, Geneva, sans-serif; background:$page-background-color;}
+// body {font:100%/1.4em 'Trebuchet MS', Arial, Helvetica, sans-serif; background:$page-background-color;}
+// body {font:100%/1.4em 'Palatino Linotype', 'Book Antiqua', Palatino, serif; background:$page-background-color;}
 
-body {background:$page-;}
 h1 {font-size:2.5em; margin:0.67em 0}
 h2 {font-size:2em; margin:0.83em 0}
 h3 {font-size:1.75em; margin:1em 0}
