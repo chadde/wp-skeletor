@@ -1,6 +1,10 @@
 <?php
 /**
  * Filters
+ *
+ * @package WordPress
+ * @subpackage SKEL-ETOR
+ * @since SKEL-ETOR 1.0
  */
 
 /**
@@ -39,11 +43,6 @@ function category_id_class($classes) {
 }
 add_filter('post_class', 'category_id_class');
 add_filter('body_class', 'category_id_class');
-
-/**
- * Allow shortcodes in Text widgets
- */
-add_filter('widget_text', 'do_shortcode');
 
 /**
  * Empty search fix

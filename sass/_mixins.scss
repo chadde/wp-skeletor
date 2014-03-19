@@ -1,4 +1,6 @@
+// =============================================================================
 // MIXINS
+// =============================================================================
 
 // Clearfix
 @mixin group {zoom:1;
@@ -17,10 +19,10 @@
 }
 
 // Thumbnail Gallery
-@mixin media-gallery($items: 4) {clear:both; list-style:none; padding:0; margin:0 -1%; width:auto; @include group;
+@mixin thumbnail-gallery($items: 4) {clear:both; list-style:none; padding:0; margin:0 -1%; width:auto; @include group;
 	li {width:(100% - (2 * $items)) / $items; display:inline-block; margin:0 1% 2%; float:left;
 		a {text-align:center; display:block; margin:0 auto;}
-		img {width:100%; height:auto;}
+		img {display:block; width:100%; height:auto;}
 	}
 }
 
@@ -92,4 +94,13 @@
 // 	@else if $point == desktop-fullscreen {
 // 		@media only screen and (min-width : 1824px) { @content; }
 // 	}
+// }
+
+// =============================================================================
+// THEME SPECIFIC MIXINS
+// =============================================================================
+
+// Example...
+// @mixin skel-etor-button($color: $primary) {background:$color; color:$text-color-inverse; display:inline-block; padding:0.25em; text-transform:uppercase;
+// 	&:hover {background:darken($primary, 10%);}
 // }

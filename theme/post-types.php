@@ -7,7 +7,13 @@
  * @since SKEL-ETOR 1.0
  */
 
-add_action( 'init', 'skel_etor_create_post_type' );
+/**
+ * SKEL-ETOR Custom Post Types
+ *
+ * Uncomment add_action() to enable
+ */
+
+// add_action( 'init', 'skel_etor_create_post_type' );
 function skel_etor_create_post_type() {
 
 	// Post Type: "Post"
@@ -89,9 +95,11 @@ function skel_etor_create_post_type() {
 
 /**
  * SKEL-ETOR Custom Taxonomies
+ *
+ * Uncomment add_action() to enable
  */
 
-add_action( 'init', 'skel_etor_create_taxonomy', 0 );
+// add_action( 'init', 'skel_etor_create_taxonomy', 0 );
 function skel_etor_create_taxonomy() {
 
 	// Taxonomy: Category

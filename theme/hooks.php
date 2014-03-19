@@ -23,7 +23,7 @@ THEME
 - skel_etor_cdn_resources
 - skel_etor_enqueue_scripts
 - skel_etor_google_font
-- google_maps_api
+- skel_etor_google_maps_api
 
 PAGE
 - skel_etor_share

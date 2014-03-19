@@ -22,7 +22,7 @@ define('SKEL_ETOR_FONTAWESOME', false);
  *
  * @param (string) 'dev' OR 'staging' OR 'production'
  */
-define('PREVIEW_ENVIRONMENT', 'dev');
+define('SKEL_ETOR_ENVIRONMENT', 'dev');
 
 /**
  * Social Links

@@ -1,5 +1,9 @@
 <?php
 /**
+ * @todo
+ */
+
+/**
  * Theme Customisation Settings
  *
  * @package WordPress
@@ -14,4 +18,4 @@ function skel_etor_customize_register( $wp_customize ) {
 		'transport' => 'refresh'
 	));
 }
-add_action( 'customize_register', 'skel_etor_customize_register' );
+// add_action( 'customize_register', 'skel_etor_customize_register' );
