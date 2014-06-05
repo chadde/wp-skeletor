@@ -45,12 +45,12 @@ function skel_etor_enqueue_scripts() {
  * Flexslider on CDN
  */
 function skel_etor_cdn_resources() {
-	if (SKEL_ETOR_FLEXSLIDER == 'true') {
+	if (SKEL_ETOR_FLEXSLIDER == true) {
 		wp_enqueue_style('flexslider', '//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/flexslider-min.css');
 		wp_enqueue_script('flexslider', '//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js', '', '1.0', true);
 	}
 	// Styles loaded for front end only
-	if (SKEL_ETOR_FONTAWESOME == 'true') {
+	if (SKEL_ETOR_FONTAWESOME == true) {
 		wp_enqueue_style('font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css');
 	}
 }

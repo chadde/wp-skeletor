@@ -23,7 +23,7 @@ THEME
 - skel_etor_cdn_resources
 - skel_etor_enqueue_scripts
 - skel_etor_google_font
-- google_maps_api
+- skel_etor_google_maps_api
 
 PAGE
 - skel_etor_share
@@ -38,9 +38,9 @@ POST
 // THEME
 add_action('after_setup_theme', 'skel_etor_setup');
 add_action('wp_head','skel_etor_google_font');
-add_action('wp_enqueue_scripts', 'skel_etor_enqueue_styles');
 add_action('wp_enqueue_scripts', 'skel_etor_cdn_resources', 10, 1);		// @see enqueue.php
-add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts', 20, 1);
+add_action('wp_enqueue_scripts', 'skel_etor_enqueue_styles', 20, 1);	// @see enqueue.php
+add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts', 30, 1);	// @see enqueue.php
 // add_action('wp_print_scripts', 'skel_etor_google_maps_api');
 
 /**

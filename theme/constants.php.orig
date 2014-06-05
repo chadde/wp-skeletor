@@ -22,12 +22,14 @@ define('SKEL_ETOR_FONTAWESOME', false);
  *
  * @param (string) 'dev' OR 'staging' OR 'production'
  */
-
+<<<<<<< HEAD
 define('SKEL_ETOR_FONTAWESOME', 'dev');
+=======
+define('SKEL_ETOR_ENVIRONMENT', 'dev');
+>>>>>>> 5a231ed1e1539a0bed852407020da7361cd6f606
 
 /**
  * Social Links
  */
-
 define('SKEL_ETOR_FACEBOOK_URL', 'http://facebook.com/');
 define('SKEL_ETOR_TWITTER_URL', 'http://twitter.com/');

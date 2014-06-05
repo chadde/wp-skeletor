@@ -14,7 +14,7 @@
  */
 
 require( get_template_directory() . '/theme/constants.php');
-if (SKEL_ETOR_ENVIRONMENT == 'dev') {
+if (SKEL_ETOR_ENVIRONMENT == "dev") {
 	require( get_template_directory() . '/theme/debug.php');
 }
 require( get_template_directory() . '/theme/classes.php');

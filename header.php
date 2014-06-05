@@ -21,8 +21,8 @@
 	 * Print the <title> tag based on what is being viewed.
 	 */
 	global $page, $paged;
-	bloginfo('name'); // Remove if using YOAST SEO
 	wp_title( '|', true, 'right' );
+	bloginfo('name'); // Remove if using YOAST SEO
 	$site_description = get_bloginfo( 'description', 'display' ); // Add the blog description for the home/front page.
 	if ( $site_description && ( is_home() || is_front_page() ) ) echo " | $site_description";
 	if ( $paged >= 2 || $page >= 2 ) echo ' | ' . sprintf( __( 'Page %s', 'skel_etor' ), max( $paged, $page ) ); // Add a page number if necessary:
