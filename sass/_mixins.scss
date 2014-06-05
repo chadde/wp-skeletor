@@ -17,7 +17,7 @@
 }
 
 // Thumbnail Gallery
-@mixin media-gallery($items: 4) {clear:both; list-style:none; padding:0; margin:0 -1%; width:auto; @include group;
+@mixin thumbnail-gallery($items: 4) {clear:both; list-style:none; padding:0; margin:0 -1%; width:auto; @include group;
 	li {width:(100% - (2 * $items)) / $items; display:inline-block; margin:0 1% 2%; float:left;
 		a {text-align:center; display:block; margin:0 auto;}
 		img {width:100%; height:auto;}

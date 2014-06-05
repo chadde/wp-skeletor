@@ -11,11 +11,18 @@
 <article id="post-<?php echo get_the_ID(); ?>" class="post-type-<?php echo get_post_type(); ?>">
 	<header>
 		<h1><?php the_title(); ?></h1>
-		<span class="meta">
-			<span class="date"><?php the_time(''); ?></span>
-			<span class="tags"><?php the_tags(); ?></span>
-		</span>
+		<?php if ( is_single() ) : ?>
+			<span class="meta">
+				<span class="date"><?php the_time(''); ?></span>
+				<span class="tags"><?php the_tags(); ?></span>
+			</span>
+		<?php endif; ?>
 	</header>
+	<?php if ( is_single() AND has_post_thumbnail() ) : ?>
+		<div class="thumb">
+			<?php the_post_thumbnail('single-thumbnail'); ?>
+		</div>
+	<?php endif; ?>
 	<div class="entry">
 		<?php the_content(); ?>
 	</div>

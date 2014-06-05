@@ -9,13 +9,9 @@
 ?>
 
 <div id="sidebar">
-	<div class="inner">
-	<?php
-	if ( is_home() ) {
-		dynamic_sidebar('home-sidebar');
-	} else {
-		dynamic_sidebar('main-sidebar');
-	}
-	?>
-	</div>
+	<?php if ( is_home() ) : ?>
+		<?php dynamic_sidebar('home-sidebar'); ?>
+	<?php else : ?>
+		<?php dynamic_sidebar('main-sidebar'); ?>
+	<?php endif; ?>
 </div>

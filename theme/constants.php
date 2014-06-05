@@ -22,10 +22,10 @@ define('SKEL_ETOR_FONTAWESOME', false);
  *
  * @param (string) 'dev' OR 'staging' OR 'production'
  */
-define('PREVIEW_ENVIRONMENT', 'dev');
+define('SKEL_ETOR_FONTAWESOME', 'dev');
 
 /**
  * Social Links
  */
-define('PREVIEW_FACEBOOK_URL', 'http://facebook.com/');
-define('PREVIEW_TWITTER_URL', 'http://twitter.com/');
+define('SKEL_ETOR_FACEBOOK_URL', 'http://facebook.com/');
+define('SKEL_ETOR_TWITTER_URL', 'http://twitter.com/');

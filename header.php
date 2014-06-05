@@ -58,8 +58,8 @@
 			<h1><a href="<?php echo site_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
 		</div>
 		<?php if (has_nav_menu('primary')) : ?>
-		<div id="nav-header">
-			<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
-		</div>
+			<div id="nav-header">
+				<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+			</div>
 		<?php endif; ?>
 	</header>
