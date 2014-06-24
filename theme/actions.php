@@ -13,34 +13,6 @@
  */
 
 /**
- * Google Webfont
- *
- * font-family: 'Karla', sans-serif;
- */
-function skel_etor_google_font() {
-	ob_start();
-
-	?>
-	<script type="text/javascript">
-	WebFontConfig = {
-		google: { families: [ 'Karla:latin', 'Roboto:900:latin' ] }
-	};
-	(function() {
-		var wf = document.createElement('script');
-		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		wf.type = 'text/javascript';
-		wf.async = 'true';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(wf, s);
-	})();
-	</script>
-	<?php
-
-	$html = ob_get_clean();
-	echo $html;
-}
-
-/**
  * SKEL-ETOR Share
  */
 function skel_etor_share() {
@@ -55,7 +27,7 @@ function skel_etor_share() {
 /**
  * Google Maps API
  *
- * With conditional loading to limit API calls
+ * Use conditional loading to limit API calls
  */
 function skel_etor_google_maps_api() {
 	// Update condition

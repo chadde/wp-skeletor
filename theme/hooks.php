@@ -37,7 +37,6 @@ POST
 
 // THEME
 add_action('after_setup_theme', 'skel_etor_setup');
-add_action('wp_head','skel_etor_google_font');
 add_action('wp_enqueue_scripts', 'skel_etor_cdn_resources', 10, 1);		// @see enqueue.php
 add_action('wp_enqueue_scripts', 'skel_etor_enqueue_styles', 20, 1);	// @see enqueue.php
 add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts', 30, 1);	// @see enqueue.php
