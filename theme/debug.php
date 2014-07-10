@@ -7,8 +7,6 @@
  * @since SKEL-ETOR 1.0
  */
 
-$debug = false;
-
 /**
  * Readable error output/debugging
  *
@@ -20,38 +18,16 @@ if ( ! function_exists('ppr') AND ! function_exists('ppro')) {
 		echo '<pre>'.htmlentities(print_r($v,true)).'</pre>';
 	}
 	function ppro($v) {
-		echo '<div class="debug"><pre>'.htmlentities(print_r($v,true)).'</pre></div>';
-	}
-}
-
-/*
- * Function backtrace
- *
- * Accepts a short message to flag bug inline in template
- * E.g: dbug('HTML block is missing from here');
- */
-if ( ! function_exists('dbug')) {
-	function dbug($msg = '') {
-		$bt = debug_backtrace();
-		$caller = array_shift($bt);
-
-		if( $msg != '') :
-			$debug_info = '<div class="debug"><pre>'.$msg.'<br><span>'.$caller['file'].'<br>Line# '.$caller['line'].'<span></pre></div>';
-		else :
-			$debug_info = '<div class="debug"><pre><span>'.$caller['file'].'<br>Line# '.$caller['line'].'<span></pre></div>';
-		endif;
-
-		echo $debug_info;
+		echo '<div class="ppro" style="position:fixed;bottom:50px;right:50px;width:70%;height:60%;overflow:auto;color:#000;background:rgba(255,255,255,0.85);font-size:11px;"><pre>'.htmlentities(print_r($v,true)).'</pre></div>';
 	}
 }
 
 /**
  * Template debugging information
  *
- * Displays when $debug = true, @see debug.php #10
  * Temporary usage: http://domain.com/?debug=1
  */
-if ( isset($_GET['debug']) OR $debug == true) {
+if ( isset($_GET['debug']) OR WP_DEBUG) {
 	/**
 	 * The Query WP is trying to fetch
 	 */

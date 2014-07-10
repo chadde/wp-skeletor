@@ -10,20 +10,22 @@
  */
 
 /**
- * Enqueue External Resources
- *
- * @see theme/enqueue.php
- */
-define('SKEL_ETOR_FLEXSLIDER', false);
-define('SKEL_ETOR_FONTAWESOME', false);
-
-/**
  * Declare Working Environment
  *
  * @param (string) 'dev' OR 'staging' OR 'production'
  */
 
-define('SKEL_ETOR_FONTAWESOME', 'dev');
+define('SKEL_ETOR_ENVIRONMENT', 'dev');
+
+/**
+ * Enqueue External Resources
+ *
+ * @see theme/enqueue.php
+ */
+
+define('SKEL_ETOR_GOOGLEFONTS', false);
+define('SKEL_ETOR_FLEXSLIDER', false);
+define('SKEL_ETOR_FONTAWESOME', false);
 
 /**
  * Social Links

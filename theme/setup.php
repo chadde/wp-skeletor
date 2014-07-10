@@ -17,6 +17,8 @@ if ( ! isset( $content_width ) )
 /**
  * Theme Supports + Menus + Sidebars
  */
+
+add_action('after_setup_theme', 'skel_etor_setup');
 function skel_etor_setup() {
 
 	require( get_template_directory() . '/theme/menus.php');

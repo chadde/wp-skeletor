@@ -1,6 +1,6 @@
 <?php
 /**
- * Filters
+ * WP Filters
  *
  * @package WordPress
  * @subpackage SKEL-ETOR
@@ -12,11 +12,11 @@
  *
  * @see http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_revisions_to_keep
  */
-function skel_etor_revisions( $num, $post ) {
-	$num = 3;
+function skel_etor_revisions( $num ) {
+	$num = 5;
     return $num;
 }
-add_filter( 'wp_revisions_to_keep', 'skel_etor_revisions', 10, 2 );
+add_filter( 'wp_revisions_to_keep', 'skel_etor_revisions', 10, 1 );
 
 /**
   * Enable shortcodes in widgets

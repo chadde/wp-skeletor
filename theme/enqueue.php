@@ -13,6 +13,7 @@
  * @example wp_enqueue_style( $handle, $src , $deps, $ver, $in_footer );
  */
 
+add_action('wp_enqueue_scripts', 'skel_etor_enqueue_styles', 20, 1);
 function skel_etor_enqueue_styles() {
 	// Styles loaded for front end only
 	if ( ! is_admin() ) {
@@ -20,12 +21,15 @@ function skel_etor_enqueue_styles() {
 	}
 }
 
+add_action('wp_enqueue_scripts', 'skel_etor_cdn_resources', 10, 1);		// @see enqueue.php
+add_action('wp_enqueue_scripts', 'skel_etor_enqueue_styles', 20, 1);	// @see enqueue.php
+add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts', 30, 1);	// @see enqueue.php
 /**
  * Theme scripts
  *
  * @example wp_enqueue_script( $handle => string, $src => string, $deps => array(), $ver => string, $in_footer => bool );
  */
-
+add_action('wp_enqueue_scripts', 'skel_etor_enqueue_scripts', 30, 1);
 function skel_etor_enqueue_scripts() {
 	if ( ! is_admin() ) {
 		wp_enqueue_script('modernizr', get_template_directory_uri().'/js/libs/modernizr-2.6.2.min.js');
@@ -40,6 +44,11 @@ function skel_etor_enqueue_scripts() {
  * External resoruces
  */
 
+/**
+ * CDN Resources
+ */
+
+add_action('wp_enqueue_scripts', 'skel_etor_cdn_resources', 10, 1);
 function skel_etor_cdn_resources() {
 
 	if ( ! is_admin() ) {
@@ -66,7 +75,22 @@ function skel_etor_cdn_resources() {
 		/**
 		 * Google Fonts
 		 */
-		wp_enqueue_style( 'skel-etor-google-font', '//fonts.googleapis.com/css?family=Karla', array(), '1.0' );
+		if ( SKEL_ETOR_GOOGLEFONTS ) {
+			wp_enqueue_style( 'skel-etor-google-font', '//fonts.googleapis.com/css?family=Karla', array(), '1.0' );
+		}
 
+	}
+}
+
+/**
+ * Google Maps API
+ *
+ * Use conditional loading to limit API calls
+ */
+add_action('wp_enqueue_scripts', 'skel_etor_google_maps_api');
+function skel_etor_google_maps_api() {
+	// Update condition
+	if ( get_post_type() == 'gmaps_post_type_condition' ) {
+		wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false');
 	}
 }
